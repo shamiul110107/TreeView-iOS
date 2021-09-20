@@ -16,7 +16,6 @@
 		1B79807526F8797C00156E0E /* TreeView_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79807426F8797C00156E0E /* TreeView_iOSTests.swift */; };
 		1B79808026F8797C00156E0E /* TreeView_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79807F26F8797C00156E0E /* TreeView_iOSUITests.swift */; };
 		1B79808E26F879CB00156E0E /* File.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B79808D26F879CB00156E0E /* File.json */; };
-		1B79809026F8891000156E0E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79808F26F8891000156E0E /* Model.swift */; };
 		1B79809426F88D5100156E0E /* ODUTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79809126F88D5100156E0E /* ODUTableViewCell.swift */; };
 		1B79809526F88D5100156E0E /* IDUTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79809226F88D5100156E0E /* IDUTableViewCell.swift */; };
 		1B79809626F88D5100156E0E /* RcGroupTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79809326F88D5100156E0E /* RcGroupTitleTableViewCell.swift */; };
@@ -55,7 +54,6 @@
 		1B79807F26F8797C00156E0E /* TreeView_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView_iOSUITests.swift; sourceTree = "<group>"; };
 		1B79808126F8797C00156E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B79808D26F879CB00156E0E /* File.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = File.json; sourceTree = "<group>"; };
-		1B79808F26F8891000156E0E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1B79809126F88D5100156E0E /* ODUTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODUTableViewCell.swift; sourceTree = "<group>"; };
 		1B79809226F88D5100156E0E /* IDUTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDUTableViewCell.swift; sourceTree = "<group>"; };
 		1B79809326F88D5100156E0E /* RcGroupTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RcGroupTitleTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				1B79806126F8797A00156E0E /* ViewController.swift */,
 				1B79809726F88D5A00156E0E /* Cell */,
 				1B79808D26F879CB00156E0E /* File.json */,
-				1B79808F26F8891000156E0E /* Model.swift */,
 				1B79806326F8797A00156E0E /* Main.storyboard */,
 				1B79806626F8797B00156E0E /* Assets.xcassets */,
 				1B79806826F8797B00156E0E /* LaunchScreen.storyboard */,
@@ -288,7 +285,6 @@
 				1B79805E26F8797A00156E0E /* AppDelegate.swift in Sources */,
 				1B79806026F8797A00156E0E /* SceneDelegate.swift in Sources */,
 				1B79809526F88D5100156E0E /* IDUTableViewCell.swift in Sources */,
-				1B79809026F8891000156E0E /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
