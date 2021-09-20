@@ -1,6 +1,6 @@
 # TreeView-iOS
 A simple treeview designed in Swift
 
-A simple tag view in swift using collectionview.
-
-<img src = "1.jpeg" width="320" height="500">
+<img src = "1.jpeg" width="320" height="600">
+<img src = "2.jpeg" width="320" height="600">
+<img src = "3.jpeg" width="320" height="600">
