@@ -1,0 +1,170 @@
+{
+    "zone" : [
+        {
+            "id": "1",
+            "name": "one",
+            "level": 0,
+            "isExpanded": false,
+            "type": "things",
+            "objects": [
+                {
+                    "id": "odu1",
+                    "name": "ODU-1",
+                    "level": 1,
+                    "type": "odu",
+                    "isExpanded": false,
+                    
+                    "objects": [
+                        {
+                            "id": "1",
+                            "name": "IDU-1",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "level": 2,
+                            "zoneName": "one",
+                            "assigned": 1
+                        },
+                        {
+                            "id": "2",
+                            "name": "IDU-2",
+                            "iduOnOf": true,
+                            "type": "idu",
+                            "assigned": 2,
+                            "zoneName": "one",
+                            "level": 2
+                        },
+                        {
+                            "id": "3",
+                            "name": "IDU-3",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "assigned": 1,
+                            "zoneName": "one",
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "id": "odu2",
+                    "name": "ODU-2",
+                    "level": 1,
+                    "type": "odu",
+                    "isExpanded": true,
+                    
+                    "objects": [
+                        {
+                            "id": "1",
+                            "name": "IDU-1",
+                            "iduOnOf": true,
+                            "type": "idu",
+                            "level": 2,
+                            "zoneName": "one",
+                            "assigned": 1
+                        },
+                        {
+                            "id": "2",
+                            "name": "IDU-2",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "assigned": 1,
+                            "zoneName": "one",
+                            "level": 2
+                        },
+                        {
+                            "id": "3",
+                            "name": "IDU-3",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "assigned": 2,
+                            "zoneName": "one",
+                            "level": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "name": "two",
+            "level": 0,
+            "isExpanded": false,
+            "type": "things",
+            "objects": [
+                {
+                    "id": "odu11",
+                    "name": "ODU-11",
+                    "level": 1,
+                    "type": "odu",
+                    "isExpanded": false,
+                    
+                    "objects": [
+                        {
+                            "id": "11",
+                            "name": "IDU-11",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "level": 2,
+                            "zoneName": "two",
+                            "assigned": 1
+                        },
+                        {
+                            "id": "21",
+                            "name": "IDU-21",
+                            "iduOnOf": true,
+                            "type": "idu",
+                            "assigned": 3,
+                            "zoneName": "two",
+                            "level": 2
+                        },
+                        {
+                            "id": "31",
+                            "name": "IDU-31",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "assigned": 1,
+                            "zoneName": "two",
+                            "level": 2
+                        }
+                    ]
+                },
+                {
+                    "id": "odu22",
+                    "name": "ODU-22",
+                    "level": 1,
+                    "type": "odu",
+                    "isExpanded": true,
+                    
+                    "objects": [
+                        {
+                            "id": "12",
+                            "name": "IDU-12",
+                            "iduOnOf": true,
+                            "type": "idu",
+                            "level": 2,
+                            "zoneName": "two",
+                            "assigned": 1
+                        },
+                        {
+                            "id": "22",
+                            "name": "IDU-22",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "assigned": 1,
+                            "zoneName": "two",
+                            "level": 2
+                        },
+                        {
+                            "id": "32",
+                            "name": "IDU-32",
+                            "iduOnOf": false,
+                            "type": "idu",
+                            "assigned": 3,
+                            "zoneName": "two",
+                            "level": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
