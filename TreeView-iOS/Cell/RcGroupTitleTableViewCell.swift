@@ -13,7 +13,6 @@ class RcGroupTitleTableViewCell: UITableViewCell {
     @IBOutlet weak var containerViewForTitleCell: UIView!
     @IBOutlet weak var titleCellLeadingConstraing: NSLayoutConstraint!
     
-    @IBOutlet weak var leftArrowButton: UIButton!
     @IBOutlet weak var titleButton: UIButton!
     @IBOutlet weak var gatewayImageView: UIButton!
 

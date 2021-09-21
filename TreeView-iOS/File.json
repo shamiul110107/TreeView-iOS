@@ -1,166 +1,118 @@
 {
     "zone" : [
         {
-            "id": "1",
+            "id": "one",
             "name": "one",
-            "level": 0,
-            "isExpanded": false,
-            "type": "things",
+            "level": 1,
             "objects": [
                 {
-                    "id": "odu1",
+                    "id": "ODU-1",
                     "name": "ODU-1",
-                    "level": 1,
-                    "type": "odu",
-                    "isExpanded": false,
-                    
+                    "level": 2,
                     "objects": [
                         {
-                            "id": "1",
+                            "id": "IDU-1",
                             "name": "IDU-1",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "level": 2,
-                            "zoneName": "one",
-                            "assigned": 1
+                            "level": 3,
+                            "objects": [
+                                {
+                                    "id": "child-1",
+                                    "name": "child-1",
+                                    "level": 4,
+                                    "objects": [
+                                        {
+                                            "id": "subchild-1",
+                                            "name": "subchild-1",
+                                            "level": 5,
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "id": "2",
+                            "id": "IDU-2",
                             "name": "IDU-2",
-                            "iduOnOf": true,
-                            "type": "idu",
-                            "assigned": 2,
-                            "zoneName": "one",
-                            "level": 2
+                            "level": 3
                         },
                         {
-                            "id": "3",
+                            "id": "IDU-3",
                             "name": "IDU-3",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "assigned": 1,
-                            "zoneName": "one",
-                            "level": 2
+                            "level": 3
                         }
                     ]
                 },
                 {
-                    "id": "odu2",
+                    "id": "ODU-2",
                     "name": "ODU-2",
-                    "level": 1,
+                    "level": 2,
                     "type": "odu",
-                    "isExpanded": true,
-                    
                     "objects": [
                         {
-                            "id": "1",
-                            "name": "IDU-1",
-                            "iduOnOf": true,
-                            "type": "idu",
-                            "level": 2,
-                            "zoneName": "one",
-                            "assigned": 1
+                            "id": "IDU-4",
+                            "name": "IDU-4",
+                            "level": 3
                         },
                         {
-                            "id": "2",
-                            "name": "IDU-2",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "assigned": 1,
-                            "zoneName": "one",
-                            "level": 2
+                            "id": "IDU-5",
+                            "name": "IDU-5",
+                            "level": 3
                         },
                         {
-                            "id": "3",
-                            "name": "IDU-3",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "assigned": 2,
-                            "zoneName": "one",
-                            "level": 2
+                            "id": "IDU-6",
+                            "name": "IDU-6",
+                            "level": 3
                         }
                     ]
                 }
             ]
         },
         {
-            "id": "1",
+            "id": "two",
             "name": "two",
-            "level": 0,
-            "isExpanded": false,
-            "type": "things",
+            "level": 1,
             "objects": [
                 {
-                    "id": "odu11",
-                    "name": "ODU-11",
-                    "level": 1,
-                    "type": "odu",
-                    "isExpanded": false,
-                    
+                    "id": "ODU-3",
+                    "name": "ODU-3",
+                    "level": 2,
                     "objects": [
                         {
-                            "id": "11",
-                            "name": "IDU-11",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "level": 2,
-                            "zoneName": "two",
-                            "assigned": 1
+                            "id": "IDU-7",
+                            "name": "IDU-7",
+                            "level": 3
                         },
                         {
-                            "id": "21",
-                            "name": "IDU-21",
-                            "iduOnOf": true,
-                            "type": "idu",
-                            "assigned": 3,
-                            "zoneName": "two",
-                            "level": 2
+                            "id": "IDU-8",
+                            "name": "IDU-8",
+                            "level": 3
                         },
                         {
-                            "id": "31",
-                            "name": "IDU-31",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "assigned": 1,
-                            "zoneName": "two",
-                            "level": 2
+                            "id": "IDU-9",
+                            "name": "IDU-9",
+                            "level": 3
                         }
                     ]
                 },
                 {
-                    "id": "odu22",
-                    "name": "ODU-22",
-                    "level": 1,
-                    "type": "odu",
-                    "isExpanded": true,
+                    "id": "ODU-4",
+                    "name": "ODU-4",
+                    "level": 2,
                     
                     "objects": [
                         {
-                            "id": "12",
+                            "id": "IDU-10",
+                            "name": "IDU-10",
+                            "level": 3
+                        },
+                        {
+                            "id": "IDU-11",
+                            "name": "IDU-11",
+                            "level": 3
+                        },
+                        {
+                            "id": "IDU-12",
                             "name": "IDU-12",
-                            "iduOnOf": true,
-                            "type": "idu",
-                            "level": 2,
-                            "zoneName": "two",
-                            "assigned": 1
-                        },
-                        {
-                            "id": "22",
-                            "name": "IDU-22",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "assigned": 1,
-                            "zoneName": "two",
-                            "level": 2
-                        },
-                        {
-                            "id": "32",
-                            "name": "IDU-32",
-                            "iduOnOf": false,
-                            "type": "idu",
-                            "assigned": 3,
-                            "zoneName": "two",
-                            "level": 2
+                            "level": 3
                         }
                     ]
                 }
