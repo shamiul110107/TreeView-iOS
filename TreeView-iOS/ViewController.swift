@@ -10,11 +10,24 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var colorDict = [Int:UIColor]()
-    var treeData : NSMutableArray? {
+    var treeData : NSMutableArray?
+    var copyTreeData = NSMutableArray()
+    @IBOutlet weak var expandOrCollapseAllButton: UIBarButtonItem!
+    var isSelected : Bool = false {
         didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+            expandOrCollapseAllButton.image = isSelected ? UIImage(named: "collapse") : UIImage(named: "expand")
+        }
+    }
+    @IBAction func expandOrCollapseAllAction(_ sender: Any) {
+        isSelected = !isSelected
+        treeData?.removeAllObjects()
+        if isSelected {
+            expandAll(objectArray: copyTreeData)
+        } else {
+            for each in copyTreeData {
+                treeData?.add(each)
             }
+            tableView.reloadData()
         }
     }
 }
@@ -29,6 +42,10 @@ extension ViewController {
         loadJson(filename: "File", completion: { response in
             if let data = response?["zone"] as? NSArray {
                 self.treeData = NSMutableArray(array: data)
+                self.copyTreeData = NSMutableArray(array: data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         })
     }
@@ -50,6 +67,19 @@ extension ViewController {
     }
 }
 
+extension ViewController {
+    func expandAll(objectArray:NSMutableArray) {
+        for item in objectArray {
+            if let dict = item as? [String:Any], let obj = dict["objects"] as? NSArray {
+                treeData?.add(item)
+                expandAll(objectArray: NSMutableArray(array: obj))
+            } else {
+                treeData?.add(item)
+            }
+        }
+        tableView.reloadData()
+    }
+}
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,7 +94,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             guard let things = tree[indexPath.row] as? [String:Any], let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as? RcGroupTitleTableViewCell else {
                 return UITableViewCell()
             }
-        
+            
             if let thingName = things["name"] as? String {
                 cell.titleButton.setTitle("\(thingName)".uppercased(), for: .normal)
             }
@@ -81,7 +111,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.containerViewForTitleCell.tag = indexPath.row
             cell.titleButton.addTarget(self, action: #selector(self.tableViewCellTap(_:)), for : .touchUpInside)
             cell.gatewayImageView.addTarget(self, action: #selector(self.tableViewCellTap(_:)), for : .touchUpInside)
-
+            
             return cell
             
         }
@@ -106,7 +136,6 @@ extension ViewController {
             }
         }
     }
-
     
     func addSelectedItem(row: Int, sender: UIButton)  {
         
@@ -134,7 +163,7 @@ extension ViewController {
                     
                     var count = row + 1
                     var cellsToAdd = [IndexPath]()
- 
+                    
                     if let objects = things["objects"] as? NSArray {
                         for each in objects {
                             let indexPath = IndexPath(row: count, section: 0)

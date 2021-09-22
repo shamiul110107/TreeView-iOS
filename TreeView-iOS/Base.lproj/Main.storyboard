@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-NN-A4z">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="titleCell" rowHeight="87" id="Ey7-7J-hL2" customClass="RcGroupTitleTableViewCell" customModule="TreeView_iOS" customModuleProvider="target">
@@ -85,20 +86,28 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="y9r-NN-A4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Sgr-T4-NjL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y9r-NN-A4z" secondAttribute="trailing" id="c61-T7-N1X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y9r-NN-A4z" secondAttribute="bottom" id="lch-Ff-5Ne"/>
-                            <constraint firstItem="y9r-NN-A4z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rpe-lO-ugv"/>
                             <constraint firstItem="y9r-NN-A4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="to7-bV-BtO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tree View" id="SYW-jL-RHO"/>
+                    <navigationItem key="navigationItem" title="Tree View" id="SYW-jL-RHO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="expand" id="UKj-aC-eBW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="expandOrCollapseAllAction:" destination="BYZ-38-t0r" id="Ceo-3y-bso"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="expandOrCollapseAllButton" destination="UKj-aC-eBW" id="WMm-vN-Ioa"/>
                         <outlet property="tableView" destination="y9r-NN-A4z" id="g7K-18-Pop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="87.723214285714278"/>
+            <point key="canvasLocation" x="872" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KOF-Ff-mqS">
@@ -108,6 +117,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mX8-S9-ese">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="tintColor" systemColor="systemBlueColor"/>
+                        <color key="barTintColor" name="AccentColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -120,9 +132,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="expand" width="24" height="24"/>
         <image name="gateway" width="32" height="32"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
