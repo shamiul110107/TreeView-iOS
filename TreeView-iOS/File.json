@@ -1,5 +1,5 @@
 {
-    "zone" : [
+    "objects" : [
         {
             "id": "one",
             "name": "one",
@@ -23,7 +23,7 @@
                                         {
                                             "id": "subchild-1",
                                             "name": "subchild-1",
-                                            "level": 5,
+                                            "level": 5
                                         }
                                     ]
                                 }

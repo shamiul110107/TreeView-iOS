@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func expandOrCollapseAllAction(_ sender: Any) {
+     
         isSelected = !isSelected
         treeData?.removeAllObjects()
         if isSelected {
@@ -38,7 +39,6 @@ extension ViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
-        
         loadJson(filename: "File", completion: { response in
             if let data = response?["zone"] as? NSArray {
                 self.treeData = NSMutableArray(array: data)
@@ -68,6 +68,25 @@ extension ViewController {
 }
 
 extension ViewController {
+    func addNewWith(parentId:String,objectArray:NSMutableArray) {
+        for item in objectArray {
+            if let dict = item as? [String:Any], let obj = dict["objects"] as? NSArray, let id = dict["id"] as? String,let level = dict["level"] as? String {
+                if id == parentId {
+                    var tempDict = [String:Any]()
+                    tempDict["name"] = "newAdditioin"
+                    tempDict["id"] = "newAdditioin"
+                    tempDict["level"] = level
+                    tempDict["parent_id"] = id
+                    let mObc = NSMutableArray(array: obj)
+                    mObc.add(tempDict)
+                    treeData?.add(tempDict)
+                    break
+                }
+                addNewWith(parentId: parentId, objectArray: NSMutableArray(array: obj))
+            }
+        }
+        tableView.reloadData()
+    }
     func expandAll(objectArray:NSMutableArray) {
         for item in objectArray {
             if let dict = item as? [String:Any], let obj = dict["objects"] as? NSArray {
@@ -208,6 +227,7 @@ extension ViewController {
             }
         }
     }
+    
 }
 
 extension UIColor {
