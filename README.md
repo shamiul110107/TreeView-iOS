@@ -1,7 +1,7 @@
 # TreeView-iOS
 A simple treeview designed in Swift
 
-<img src = "11.jpeg" width="320" height="600">
+<img src = "expand.jpeg" width="320" height="600">
 
  This actual data format included in project folder name 'File.json'.
  
